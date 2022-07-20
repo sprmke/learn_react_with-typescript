@@ -1,9 +1,9 @@
 import './App.css';
-import Todo from './models/todo';
+import TodoModel from './models/todo-model';
 import Todos from './components/Todos';
 
 function App() {
-  const todos = [new Todo('Learn React'), new Todo('Learn React')];
+  const todos = [new TodoModel('Learn React'), new TodoModel('Learn React')];
 
   return (
     <div>
