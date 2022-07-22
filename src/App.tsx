@@ -13,10 +13,14 @@ function App() {
     setTodos((currTodos) => currTodos.concat(newTodo));
   };
 
+  const removeTodoHandler = (todoId: string) => {
+    setTodos((currTodos) => currTodos.filter((todo) => todo.id !== todoId));
+  };
+
   return (
     <div>
       <NewTodo onAddTodo={addTodoHandler} />
-      <Todos items={todos} />
+      <Todos items={todos} onRemoveTodo={removeTodoHandler} />
     </div>
   );
 }
